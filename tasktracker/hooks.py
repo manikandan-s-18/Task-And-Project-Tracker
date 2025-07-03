@@ -4,6 +4,21 @@ app_publisher = "m"
 app_description = "task"
 app_email = "m@gmaol.com"
 app_license = "mit"
+fixtures = [
+    {
+        "dt": "DocType",
+        "filters": [["custom", "=", 1]]
+    }
+]
+
+app_include_js = "/assets/tasktracker/js/task.js"
+
+
+scheduler_events = {
+    "weekly": [
+        "tasktracker.tasktracker.tasktracker.doctype.task.emailtasks.send_weekly_project_summary"
+    ]
+}
 
 # Apps
 # ------------------
