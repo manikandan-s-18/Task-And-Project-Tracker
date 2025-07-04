@@ -19,7 +19,7 @@
   "amended_from",
   "completion_percent",
   "tester",
-  "test"
+  "tester_status"
  ],
  "fields": [
   {
@@ -94,22 +94,26 @@
    "label": "Completion percent"
   },
   {
+   "default": "manikandans11sas@gmail.com",
    "fieldname": "tester",
    "fieldtype": "Link",
    "label": "Tester",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
-   "fieldname": "test",
-   "fieldtype": "Button",
-   "label": "Test"
+   "fieldname": "tester_status",
+   "fieldtype": "Select",
+   "label": "Tester Status",
+   "options": "Null\nTested - OK\nNeeds Rework",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-03 11:27:16.106821",
+ "modified": "2025-07-04 12:00:28.653732",
  "modified_by": "Administrator",
  "module": "Tasktracker",
  "name": "Task",

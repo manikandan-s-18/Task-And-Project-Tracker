@@ -1,10 +1,16 @@
-# your_app/api.py
 import frappe
+from frappe.utils import get_url
+from frappe import _
 
 @frappe.whitelist()
 def initiate_testing(task_id, tester):
+    if not task_id or not tester:
+        frappe.throw(_("Task ID and Tester are required."))
+
+    # Get the Task document
     task = frappe.get_doc("Task", task_id)
 
+    # Create Task Testing Review document
     doc = frappe.get_doc({
         "doctype": "Task Testing Review",
         "task": task_id,
@@ -12,17 +18,8 @@ def initiate_testing(task_id, tester):
     })
     doc.insert(ignore_permissions=True)
 
-    # Send mail to tester
-    link = f"{frappe.utils.get_url()}/app/task-testing-review/{doc.name}"
-    frappe.sendmail(
-        recipients=[tester],
-        subject=f"Task Testing Assigned: {task.subject}",
-        message=f"""
-        Hello,<br><br>
-        You are assigned to test the task: <b>{task.subject}</b>.<br>
-        <a href="{link}">Click here to test</a><br><br>
-        Regards,<br>Your Task Tracker
-        """
-    )
+    # Send email to tester
+    link = f"{get_url()}/app/task-testing-review/{doc.name}"
+   
 
     return doc.name

@@ -6,7 +6,6 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_enxh",
-  "name1",
   "assigned_to"
  ],
  "fields": [
@@ -20,20 +19,13 @@
    "in_list_view": 1,
    "label": "assigned_to",
    "options": "User"
-  },
-  {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Name",
-   "options": "User"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-06-26 12:39:11.994913",
+ "modified": "2025-07-03 13:26:26.179179",
  "modified_by": "Administrator",
  "module": "Tasktracker",
  "name": "User Table",
