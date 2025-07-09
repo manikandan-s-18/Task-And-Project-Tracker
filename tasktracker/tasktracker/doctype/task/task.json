@@ -18,8 +18,7 @@
   "assigned_to",
   "amended_from",
   "completion_percent",
-  "tester",
-  "tester_status"
+  "tester"
  ],
  "fields": [
   {
@@ -47,7 +46,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "In Working\nCompleted\nCancelled\nOverdue"
+   "options": "To Do\nIn Working\nTesting in Progress\nCompleted\nOverdue",
+   "read_only": 1
   },
   {
    "fieldname": "assigned_to",
@@ -100,20 +100,13 @@
    "label": "Tester",
    "options": "User",
    "read_only": 1
-  },
-  {
-   "fieldname": "tester_status",
-   "fieldtype": "Select",
-   "label": "Tester Status",
-   "options": "Null\nTested - OK\nNeeds Rework",
-   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-04 12:00:28.653732",
+ "modified": "2025-07-09 18:02:23.766137",
  "modified_by": "Administrator",
  "module": "Tasktracker",
  "name": "Task",
