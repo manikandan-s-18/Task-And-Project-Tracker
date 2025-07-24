@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestMilestones(FrappeTestCase):
+class TestMile(FrappeTestCase):
 	pass

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Milestones(Document):
+class Mile(Document):
 	pass
